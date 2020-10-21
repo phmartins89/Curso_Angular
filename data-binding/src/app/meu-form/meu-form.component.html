@@ -1,0 +1,29 @@
+<section class="two-way-binding">
+    <article>
+        <h3>Two-way data biding</h3>
+        <div>
+
+            <input type="text"
+            [value]="nome"
+            (input)="nome = $event.target.value" 
+            /> <!--para pegar um valor -->
+
+            <input type="text"
+            [ngModel]="nome"
+            (ngModelChange)="nome = $event" 
+            /> 
+
+            <input type="text" [(ngModel)]="nome"/> <!--sintaxe amigável-->
+
+            <p>Você digitou um {{nome}}</p>
+
+        </div>
+        <div>
+            <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.</p>
+
+            <input type="text" [(ngModel)]="pessoa.nome"/>
+            <input type="text" [(ngModel)]="pessoa.idade"/>
+
+        </div>
+    </article>
+</section>
