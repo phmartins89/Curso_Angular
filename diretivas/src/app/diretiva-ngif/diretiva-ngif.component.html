@@ -1,4 +1,4 @@
-<h5>*ngIF</h5>
+<!--<h5>*ngIF</h5>
 
 <div *ngIf="cursos.length > 0" >
     Lista de Cursos
@@ -9,7 +9,7 @@
 </div>
 
 <!--Como fazer um IF ElSE-->
-<div *ngIf="mostrarCursos" >
+<!--<div *ngIf="mostrarCursos" >
     Lista de Cursos
 </div>
 
@@ -28,3 +28,15 @@
 <div [hidden]="mostrarCursos" >
     Não existem cursos a serem listados
 </div>
+<br> -->
+
+<h5>Removendo o * e usando template</h5>
+<div *ngIf="mostrarCursos" >
+    Lista de Cursos
+</div>
+
+<template [niIf] = "mostrarCursos">
+    <div>Listar cursos aqui</div>
+</template>
+
+<div template="*ngIf="mostrarCursos">Listar cursos aqui</div>
