@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class CursosService {
 
-  constructor() { }
+  constructor() { 
+    console.log('CursosService');
+    }
 
   getCursos(){
     return ['Java','Ext JavaScript', 'Angular' ];
