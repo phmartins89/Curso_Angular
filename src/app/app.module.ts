@@ -12,6 +12,7 @@ import { CursosModule } from './cursos/cursos.module';
 import { CursoComponent } from './servicos/curso/curso.component';
 import {CursoService} from './servicos/curso/curso.service';
 import { CriarCursoComponent } from './criar-curso/criar-curso.component';
+import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { CriarCursoComponent } from './criar-curso/criar-curso.component';
     MeuPrimeiroComponent,
     MeuPrimeiro2Component,
     CursoComponent,
-    CriarCursoComponent    
+    CriarCursoComponent,
+    ExemplosPipesComponent    
   ],
   imports: [
     BrowserModule,

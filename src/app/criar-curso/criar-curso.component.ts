@@ -5,7 +5,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-criar-curso',
   templateUrl: './criar-curso.component.html',
-  styleUrls: ['./criar-curso.component.css']
+  styleUrls: ['./criar-curso.component.css'],
+  providers: [CursosService]
 })
 export class CriarCursoComponent implements OnInit {
 
@@ -17,6 +18,10 @@ export class CriarCursoComponent implements OnInit {
 
     this.cursos = this.CursosService.getCursos()
 
+  }
+
+  onAddCurso(curso: string){
+    this.CursosService.addCurso(curso);
   }
 
 }
