@@ -1,5 +1,5 @@
 //import { CursosService } from './../../../primeiro-projeto/src/app/cursos/cursos.service';
-import { CursosService } from './../cursos/cursos.service';
+import { CursosService } from '../cursosRaiz/cursos.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
