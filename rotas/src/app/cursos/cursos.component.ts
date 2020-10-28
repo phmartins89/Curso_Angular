@@ -1,3 +1,5 @@
+import { CursosService } from './../../../../rotas/src/app/cursos/cursos.service';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursosComponent implements OnInit {
 
-  constructor() { }
+  cursos: any[];
 
-  ngOnInit(): void {
+  constructor(private cursosService: CursosService) { }
+
+  ngOnInit() {
+    this.cursos = this.cursosService.getCursos();
   }
 
 }
