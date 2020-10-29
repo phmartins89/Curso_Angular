@@ -1,6 +1,6 @@
 
 
-<nav>
+<nav *ngIf = "mostrarmanu">
     <div class="nav-wrapper">
       <a  routerLink="" class="brand-logo right">Rotas Ng2</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -8,8 +8,9 @@
         <li routerLinkActive ="active"><a routerLink="/cursos" 
           [queryParams]="{pagina:1}" 
           >Cursos</a></li>
-        <li routerLinkActive ="active"><a [routerLink]="['curso',idCurso.value]">
-          Curso com ID</a></li>
+        <!--li routerLinkActive ="active"><a [routerLink]="['curso',idCurso.value]">
+          Curso com ID</a></li-->
+        <li routerLinkActive ="active"><a routerLink="/alunos" >Alunos</a></li> 
           
       </ul>
     </div>
@@ -17,8 +18,8 @@
 
 
 <div class="container">
-  <p>Entre com o ID do curso</p>
-  <input #idCurso>
+  <!--p>Entre com o ID do curso</p>
+  <input #idCurso-->
     <router-outlet></router-outlet>
     
 </div>

@@ -1,10 +1,7 @@
-import { CursosModule } from './../../../projetosIniciais/src/app/cursosRaiz/cursos.module';
 //import {routing} from './app.routing';
 import { MaterializeModule } from 'angular2-materialize';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +11,9 @@ import { CursosComponent } from './cursos/cursos.component';
 import { DetalheCursoComponent } from './cursos/detalhe-curso/detalhe-curso.component';
 import { CursosService } from './cursos/cursos.service';
 import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
+import { AlunosModule } from './alunos/alunos.module';
+import { CursosModule } from './../../../projetosIniciais/src/app/cursosRaiz/cursos.module';
+import { AuthService } from './login/auth.service';
 
 
 @NgModule({
@@ -30,11 +30,12 @@ import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso
     AppRoutingModule,
     MaterializeModule,
     AppRoutingModule,
-    CursosModule
+    CursosModule,
+    AlunosModule
     //routing,
      
   ],
-  providers: [CursosService],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
