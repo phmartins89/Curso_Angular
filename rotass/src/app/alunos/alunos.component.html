@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-6">
+        <p>Lista de alunos</p>
+
+        <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li *ngFor="let aluno of alunos" class="list-group-item">
+                    <a [routerLink]="[aluno.id]">
+                        {{ aluno.nome }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-6">
+        <router-outlet></router-outlet>
+    </div>
+</div>

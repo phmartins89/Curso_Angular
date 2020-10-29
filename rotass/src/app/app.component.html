@@ -1,0 +1,31 @@
+<nav *ngIf="mostrarMenu" class="navbar navbar-expand-md navbar-light bg-light">
+  <a routerLink="" class="navbar-brand">Rotas</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/cursos" [queryParams]="{pagina:1}">Cursos</a>
+      </li>
+      <!--li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['curso', idCurso.value]">Curso com ID</a>
+      </li-->
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/alunos">Alunos</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <!--p>ID do curso</p>
+  <input #idCurso (input)="0"-->
+  <router-outlet></router-outlet>
+</div>

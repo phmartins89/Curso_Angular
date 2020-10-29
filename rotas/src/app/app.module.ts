@@ -15,7 +15,7 @@ import { DetalheCursoComponent } from './cursos/detalhe-curso/detalhe-curso.comp
 import { CursosService } from './cursos/cursos.service';
 import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 import { AlunosModule } from './alunos/alunos.module';
-import { CursosModule } from './../../../projetosIniciais/src/app/cursosRaiz/cursos.module';
+import { CursosModule } from './cursos/cursos.module';
 import { AuthService } from './login/auth.service';
 import { CursosGuard } from './guards/cursos.guard';
 

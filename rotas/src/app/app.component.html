@@ -4,10 +4,15 @@
     <div class="nav-wrapper">
       <a  routerLink="" class="brand-logo right">Rotas Ng2</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
+
+        <!--li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/cursos" [queryParams]="{​​​​​pagina:1}​​​​​">Cursos</a>
+        </li-->
+
         <li routerLinkActive ="active"><a routerLink="/login" >login</a></li>
-        <li routerLinkActive ="active"><a routerLink="/cursos" 
+        <!--li routerLinkActive ="active"><a routerLink="/cursos" 
           [queryParams]="{pagina:1}" 
-          >Cursos</a></li>
+          >Cursos</a></li-->
         <li routerLinkActive ="active"><a [routerLink]="['curso',idCurso.value]">
           Curso com ID</a></li>
         <li routerLinkActive ="active"><a routerLink="/alunos" >Alunos</a></li> 
