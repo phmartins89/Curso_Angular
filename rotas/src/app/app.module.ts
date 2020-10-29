@@ -1,9 +1,12 @@
-//import {routing} from './app.routing';
+import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { AuthGuard } from './guards/auth.guard';
+import {routing} from './app.routing';
 import { MaterializeModule } from 'angular2-materialize';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+
+import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -14,16 +17,14 @@ import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso
 import { AlunosModule } from './alunos/alunos.module';
 import { CursosModule } from './../../../projetosIniciais/src/app/cursosRaiz/cursos.module';
 import { AuthService } from './login/auth.service';
-
+import { CursosGuard } from './guards/cursos.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    CursosComponent,
-    DetalheCursoComponent,
-    CursoNaoEncontradoComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -31,11 +32,16 @@ import { AuthService } from './login/auth.service';
     MaterializeModule,
     AppRoutingModule,
     CursosModule,
-    AlunosModule
-    //routing,
+    AlunosModule,
+    FormsModule,
+    routing,
      
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService, 
+    AuthGuard,
+    CursosGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
